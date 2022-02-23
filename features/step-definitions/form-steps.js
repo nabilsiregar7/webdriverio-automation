@@ -18,9 +18,3 @@ Then(/^I can see ID (.*) Username (.*) Source Bank (.*) Destination Bank (.*) an
         expect(formPage.destBank).toHaveTextContaining(dest_bank)
         expect(formPage.amount).toHaveTextContaining(amount)
 });
-
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect(SecurePage.flashAlert).toBeExisting();
-    await expect(SecurePage.flashAlert).toHaveTextContaining(message);
-});
-
